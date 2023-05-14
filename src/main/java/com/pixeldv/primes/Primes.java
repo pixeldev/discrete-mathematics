@@ -47,7 +47,7 @@ public final class Primes {
 
   public static void main(final @NotNull String[] args) {
     final var scanner = new Scanner(System.in);
-    System.out.println(
+    System.out.print(
       """
       -=-= Bienvenido =-=-
       Este programa verifica si un número es primo o no.
@@ -55,9 +55,9 @@ public final class Primes {
       Mientras más grande sea el número, más tiempo tardará el programa en verificarlo.
       Sin embargo, el programa está optimizado para verificar números grandes.
 
-      Ingresa un número para verificar si es primo:"""
+      Ingresa un número para verificar si es primo:
+      >>\s"""
     );
-    System.out.print(">> ");
     final var number = scanner.nextBigInteger();
     final var start = System.currentTimeMillis();
     final var isPrime = isPrime(number, 25);
