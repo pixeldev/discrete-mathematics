@@ -1,14 +1,13 @@
 package com.pixeldv.discretes;
 
 import java.util.Scanner;
-import org.jetbrains.annotations.NotNull;
 
 public final class Division {
   private Division() {
     throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
   }
 
-  public static void main(final @NotNull String[] args) {
+  public static void start() {
     final var scanner = new Scanner(System.in);
     System.out.println(
       """

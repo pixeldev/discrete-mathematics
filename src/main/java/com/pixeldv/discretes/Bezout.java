@@ -7,7 +7,7 @@ public final class Bezout {
     throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
   }
 
-  public static void main(final String[] args) {
+  public static void start() {
     final var scanner = new Scanner(System.in);
     System.out.println(
       """

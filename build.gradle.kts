@@ -47,4 +47,10 @@ tasks {
     dependsOn("spotlessApply")
     options.compilerArgs.add("-parameters")
   }
+
+  jar {
+    manifest {
+      attributes["Main-Class"] = "com.pixeldv.discretes.Main"
+    }
+  }
 }

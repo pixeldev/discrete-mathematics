@@ -2,8 +2,8 @@ package com.pixeldv.discretes;
 
 import java.util.Scanner;
 
-public final class BaseConverter {
-  private BaseConverter() {
+public final class BaseConversion {
+  private BaseConversion() {
     throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
   }
 
@@ -26,7 +26,7 @@ public final class BaseConverter {
   }
 
   public static String convertToBase(final long decimal, final long base) {
-    StringBuilder result = new StringBuilder();
+    final var result = new StringBuilder();
     var q = decimal;
     var r = 0L;
     while (q > 0) {
@@ -37,7 +37,7 @@ public final class BaseConverter {
     return result.toString();
   }
 
-  public static void main(String[] args) {
+  public static void start() {
     final var scanner = new Scanner(System.in);
     System.out.println(
       """

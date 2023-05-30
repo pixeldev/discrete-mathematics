@@ -45,7 +45,7 @@ public final class Primes {
     return true;
   }
 
-  public static void main(final @NotNull String[] args) {
+  public static void start() {
     final var scanner = new Scanner(System.in);
     System.out.print(
       """
