@@ -1,1 +1,1 @@
-rootProject.name = "primes"
+rootProject.name = "discrete-mathematics"

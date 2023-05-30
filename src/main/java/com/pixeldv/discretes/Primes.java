@@ -1,4 +1,4 @@
-package com.pixeldv.primes;
+package com.pixeldv.discretes;
 
 import java.math.BigInteger;
 import java.util.Random;
@@ -58,7 +58,9 @@ public final class Primes {
       Ingresa un número para verificar si es primo:
       >>\s"""
     );
-    final var number = scanner.nextBigInteger();
+    final var numberString = scanner.nextLine();
+    final var number = new BigInteger(numberString);
+    System.out.println(number);
     final var start = System.currentTimeMillis();
     final var isPrime = isPrime(number, 25);
     final var end = System.currentTimeMillis();

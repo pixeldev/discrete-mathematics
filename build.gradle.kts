@@ -39,16 +39,12 @@ spotless {
 
 repositories {
   mavenLocal()
-  maven("https://repo.revengenetwork.es/repository/libs/") {
-    name = "fenixRepository"
-    credentials(PasswordCredentials::class)
-  }
+  mavenCentral()
 }
 
 tasks {
   compileJava {
     dependsOn("spotlessApply")
-    dependsOn("checkstyleMain")
     options.compilerArgs.add("-parameters")
   }
 }
