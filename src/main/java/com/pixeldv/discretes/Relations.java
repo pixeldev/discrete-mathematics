@@ -2,10 +2,14 @@ package com.pixeldv.discretes;
 
 import java.util.Scanner;
 
-public class Relations {
+public final class Relations {
   private static final String SUBINDEX = "₀₁₂₃₄₅₆₇₈₉";
 
-  public static void main(String[] args) {
+  private Relations() {
+    throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+  }
+
+  public static void main(final String[] args) {
     final var scanner = new Scanner(System.in);
     System.out.println(
       """
