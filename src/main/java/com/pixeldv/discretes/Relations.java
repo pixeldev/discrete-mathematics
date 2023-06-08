@@ -25,11 +25,17 @@ public final class Relations {
     System.out.print("Ingresa el número m \n>> ");
     final var m = scanner.nextInt();
     final var builder = new StringBuilder();
-    builder.append("-=-= Relaciones =-=-\n");
+    builder.append("\n-=-= Relaciones =-=-\n");
     final var subindex = subindexOf(n);
+    final var subindexLength = subindex.length();
+    System.out.println("subindexLength = " + subindexLength);
+    final var already = new boolean[n];
     for (var x = 0; x < n; x++) {
       for (var y = 0; y < n; y++) {
         if ((x + y) % n == m) {
+          if (already[x] || already[y]) {
+            continue;
+          }
           builder.append("[")
             .append(x)
             .append("]")
@@ -38,11 +44,29 @@ public final class Relations {
             .append(y)
             .append("]")
             .append(subindex)
+            .append("\n")
+            .append(" ".repeat(subindexLength + 3 + numberOfDigits(x)))
+            .append("<==== ")
             .append("\n");
+          already[x] = true;
+          already[y] = true;
         }
       }
     }
+    builder.append("-=-=-=-=-=-=-=-=-=-");
     System.out.println(builder);
+  }
+
+  public static int numberOfDigits(int number) {
+    if (number == 0) {
+      return 1;
+    }
+    var digits = 0;
+    while (number > 0) {
+      number /= 10;
+      digits++;
+    }
+    return digits;
   }
 
   public static String subindexOf(int number) {
