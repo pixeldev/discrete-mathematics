@@ -50,7 +50,7 @@ tasks {
 
   jar {
     manifest {
-      attributes["Main-Class"] = "com.pixeldv.discretes.Main"
+      attributes["Main-Class"] = "com.pixeldv.discretes.Relations"
     }
   }
 }
