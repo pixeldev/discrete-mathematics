@@ -16,10 +16,10 @@ public final class LexicographicOrder {
   }
 
   public static int compare(final @NotNull String a, final @NotNull String b) {
-    final int length = Math.min(a.length(), b.length());
+    final var length = Math.min(a.length(), b.length());
     for (int i = 0; i < length; i++) {
-      final char aChar = lower(a.charAt(i));
-      final char bChar = lower(b.charAt(i));
+      final var aChar = lower(a.charAt(i));
+      final var bChar = lower(b.charAt(i));
       if (aChar != bChar) {
         return aChar - bChar;
       }
@@ -28,11 +28,11 @@ public final class LexicographicOrder {
   }
 
   public static @NotNull List<String> sort(final @NotNull List<String> list) {
-    final List<String> sorted = new ArrayList<>(list.size());
-    final List<String> unsorted = new ArrayList<>(list);
+    final var sorted = new ArrayList<String>(list.size());
+    final var unsorted = new ArrayList<>(list);
     while (!unsorted.isEmpty()) {
-      String min = unsorted.get(0);
-      for (final String comparing : unsorted) {
+      var min = unsorted.get(0);
+      for (final var comparing : unsorted) {
         if (compare(comparing, min) < 0) {
           min = comparing;
         }
@@ -44,8 +44,8 @@ public final class LexicographicOrder {
   }
 
   public static int largestWordLength(final @NotNull List<String> list) {
-    int max = 0;
-    for (final String word : list) {
+    var max = 0;
+    for (final var word : list) {
       if (word.length() > max) {
         max = word.length();
       }
